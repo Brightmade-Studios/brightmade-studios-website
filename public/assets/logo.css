@@ -1,5 +1,5 @@
-/* Animated logo on the home page (plays once; tap the logo to replay). */
-svg.logo { width: min(640px, 92vw); height: auto; overflow: visible; cursor: pointer; -webkit-tap-highlight-color: transparent; display: block; margin: 0 auto; }
+/* Animated logo on the home page (plays once when the page loads, then stays). */
+svg.logo { width: min(640px, 92vw); height: auto; overflow: visible; display: block; margin: 0 auto; }
 svg.logo .txt { fill: var(--text); }
 svg.logo .burst, svg.logo .tsp { fill: var(--spark); opacity: 0; }
 svg.logo .trail { fill: none; stroke: url(#tg); stroke-width: 14; stroke-linecap: round; opacity: 0; }

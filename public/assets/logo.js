@@ -1,4 +1,4 @@
-// Plays the logo intro once the B and star images have loaded; tap the logo to replay.
+// Plays the logo intro once the B and star images have loaded.
 (function () {
   var logo = document.getElementById("logo");
   if (!logo) return;
@@ -14,5 +14,4 @@
     return new Promise(function (r) { var i = new Image(); i.onload = i.onerror = r; i.src = s; });
   })).then(function () { document.body.classList.remove("wait"); play(); });
   setTimeout(function () { document.body.classList.remove("wait"); }, 3000);
-  logo.addEventListener("click", play);
 })();
