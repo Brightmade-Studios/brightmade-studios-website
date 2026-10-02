@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Delete your account | Brightmade Studios</title>
   <meta name="description" content="How to delete your Brightmade Studios app account and data.">
-  <meta name="theme-color" content="#fffaf3" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#12111c" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#07081a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Delete your account | Brightmade Studios">
+  <meta property="og:description" content="How to delete your Brightmade Studios app account and data.">
+  <meta property="og:image" content="https://brightmadestudios.com/assets/logo/icon-512.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/theme.css">
   <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
+  <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Brightmade Studios home"><span class="brand-mark" aria-hidden="true">B</span>Brightmade Studios</a>
+      <a class="brand" href="/"><img src="/assets/logo/logo.svg" alt="Brightmade Studios" width="134" height="46"></a>
       <nav class="nav" aria-label="Main">
         <a href="/apps">Apps</a>
         <a href="/support">Support</a>
@@ -61,5 +66,6 @@
       </nav>
     </div>
   </footer>
+  <script src="/assets/galaxy.js" defer></script>
 </body>
 </html>

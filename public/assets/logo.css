@@ -1,0 +1,42 @@
+/* Animated logo on the home page (plays once; tap the logo to replay). */
+svg.logo { width: min(640px, 92vw); height: auto; overflow: visible; cursor: pointer; -webkit-tap-highlight-color: transparent; display: block; margin: 0 auto; }
+svg.logo .txt { fill: var(--text); }
+svg.logo .burst, svg.logo .tsp { fill: var(--spark); opacity: 0; }
+svg.logo .trail { fill: none; stroke: url(#tg); stroke-width: 14; stroke-linecap: round; opacity: 0; }
+body.wait svg.logo, body.wait .fade { visibility: hidden; }
+
+.play .star { transform-box: view-box; transform-origin: 165px 335px; animation: starIn 1s cubic-bezier(.2,.75,.25,1) both; }
+.play .trail { stroke-dasharray: 900; animation: trail 1.1s ease-out both; }
+.play .tsp { transform-box: fill-box; transform-origin: center; animation: twinkle .9s ease-out var(--d) both; }
+.play .bimg { transform-box: view-box; transform-origin: 475px 600px; animation: bPop .75s cubic-bezier(.3,.7,.3,1) .85s both; }
+.play .burst { transform-box: fill-box; transform-origin: center; animation: burst .9s ease-out .95s both; }
+.play .l { transform-box: fill-box; transform-origin: 50% 100%; animation: drop .8s cubic-bezier(.3,.6,.4,1) calc(1.35s + var(--i) * .09s) both; }
+.play .studios { animation: fadeUp .8s ease-out 2.55s both; }
+body.play .fade { animation: fadeIn .8s ease-out 2.9s both; }
+
+@keyframes starIn {
+  0% { transform: translate(-560px,-380px) rotate(-540deg) scale(.25); opacity: 0; filter: drop-shadow(0 0 0 var(--text)); }
+  12% { opacity: 1; }
+  70% { transform: translate(8px,6px) rotate(12deg) scale(1.18); filter: drop-shadow(0 0 30px var(--star-glow)); }
+  85% { transform: translate(-3px,-2px) rotate(-5deg) scale(.94); }
+  100% { transform: none; opacity: 1; filter: drop-shadow(0 0 0 transparent); }
+}
+@keyframes trail { 0% { stroke-dashoffset: 900; opacity: .9; } 60% { stroke-dashoffset: 0; opacity: .8; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes twinkle { 0% { opacity: 0; transform: scale(0); } 30% { opacity: 1; transform: scale(var(--s)) rotate(45deg); } 100% { opacity: 0; transform: scale(0) rotate(90deg); } }
+@keyframes bPop { 0% { transform: scale(.15); opacity: 0; } 45% { opacity: 1; } 60% { transform: scale(1.12); } 78% { transform: scale(.95); } 90% { transform: scale(1.03); } 100% { transform: scale(1); opacity: 1; } }
+@keyframes burst { 0% { opacity: 0; transform: translate(0,0) scale(0); } 20% { opacity: 1; transform: translate(calc(var(--dx)*.4),calc(var(--dy)*.4)) scale(var(--s)) rotate(30deg); } 100% { opacity: 0; transform: translate(var(--dx),var(--dy)) scale(.2) rotate(120deg); } }
+@keyframes drop {
+  0% { transform: translateY(-240px) scale(.7,1.3); opacity: 0; }
+  45% { transform: translateY(0) scale(1.22,.78); opacity: 1; }
+  62% { transform: translateY(-42px) scale(.92,1.1); }
+  78% { transform: translateY(0) scale(1.08,.92); }
+  90% { transform: translateY(-9px) scale(.98,1.02); }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes fadeUp { 0% { opacity: 0; transform: translateY(22px); } 100% { opacity: 1; transform: none; } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .play *, body.play .fade { animation: none !important; }
+  svg.logo .trail, svg.logo .burst, svg.logo .tsp { display: none; }
+}
