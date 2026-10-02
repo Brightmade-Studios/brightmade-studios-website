@@ -1,0 +1,41 @@
+/*
+  Brightmade theme: the only place colors are defined.
+  Every other stylesheet uses these variables, never raw hex.
+  Palette: "Daylight Indigo" (indigo + sunshine on warm paper).
+  Dark mode follows the device setting.
+*/
+:root {
+  color-scheme: light dark;
+
+  --bg: #fffaf3;
+  --surface: #ffffff;
+  --surface-alt: #f5efe6;
+  --border: #e6ddcf;
+  --text: #1d1b2e;
+  --text-muted: #5b5870;
+  --accent: #4338ca;
+  --accent-hover: #3730a3;
+  --accent-contrast: #ffffff;
+  --highlight: #ffc83d;
+  --highlight-text: #1d1b2e;
+  --focus: #ffb000;
+  --shadow: 0 1px 2px rgba(29, 27, 46, 0.06), 0 8px 24px rgba(29, 27, 46, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12111c;
+    --surface: #1c1b2a;
+    --surface-alt: #242336;
+    --border: #34324a;
+    --text: #f2f0fa;
+    --text-muted: #aba8c2;
+    --accent: #a5a8ff;
+    --accent-hover: #c3c5ff;
+    --accent-contrast: #12111c;
+    --highlight: #ffd45c;
+    --highlight-text: #12111c;
+    --focus: #ffd45c;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
