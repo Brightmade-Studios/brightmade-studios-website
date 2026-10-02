@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("/assets/fonts/nunito.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-hover); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
+.site-header .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--text); text-decoration: none;
+  font-weight: 800; font-size: 20px; letter-spacing: -0.01em;
+}
+.brand:hover { color: var(--text); }
+.brand-mark {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--accent); color: var(--accent-contrast);
+  display: inline-grid; place-items: center;
+  font-weight: 900; font-size: 20px; line-height: 1;
+}
+.nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.nav a { color: var(--text-muted); text-decoration: none; font-weight: 600; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
+
+/* Main */
+main { flex: 1; padding: 48px 0 64px; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
+h1 { font-size: clamp(32px, 6vw, 48px); font-weight: 900; margin: 0 0 16px; }
+h2 { font-size: 24px; font-weight: 800; margin: 40px 0 12px; }
+h3 { font-size: 19px; font-weight: 800; margin: 28px 0 8px; }
+p, ul, ol { margin: 0 0 16px; }
+li { margin-bottom: 6px; }
+.lead { font-size: 20px; color: var(--text-muted); max-width: 640px; }
+.muted { color: var(--text-muted); }
+.small { font-size: 15px; }
+
+.hero { padding: 24px 0 8px; }
+.hero h1 .glow {
+  background: linear-gradient(transparent 62%, var(--highlight) 62%);
+  color: inherit; padding: 0 4px;
+}
+@media (prefers-color-scheme: dark) {
+  .hero h1 .glow { background: none; color: var(--highlight); padding: 0; }
+}
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 32px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px; box-shadow: var(--shadow);
+}
+.card h2, .card h3 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+.card a, .doc a { overflow-wrap: anywhere; }
+
+.pill {
+  display: inline-block; font-size: 13px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  background: var(--highlight); color: var(--highlight-text);
+  border-radius: 999px; padding: 2px 10px; margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block; background: var(--accent); color: var(--accent-contrast);
+  font-weight: 800; text-decoration: none; border-radius: 12px; padding: 12px 20px;
+}
+.button:hover { background: var(--accent-hover); color: var(--accent-contrast); }
+
+.callout {
+  background: var(--surface-alt); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+}
+
+.doc { max-width: 720px; }
+.doc .updated { color: var(--text-muted); font-size: 15px; margin-bottom: 28px; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); padding: 24px 0 32px; color: var(--text-muted); font-size: 15px; }
+.site-footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.site-footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
+.site-footer a { color: var(--text-muted); }
+.site-footer a:hover { color: var(--text); }
