@@ -40,3 +40,5 @@ body.play .fade { animation: fadeIn .8s ease-out 2.9s both; }
   .play *, body.play .fade { animation: none !important; }
   svg.logo .trail, svg.logo .burst, svg.logo .tsp { display: none; }
 }
+
+@media (min-width: 900px) { svg.logo { width: min(940px, 82vw); } }

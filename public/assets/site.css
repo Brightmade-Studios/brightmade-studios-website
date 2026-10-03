@@ -38,7 +38,7 @@ a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-hover); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
 
-.wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
 /* Header */
 .site-header {
@@ -102,7 +102,7 @@ li { margin-bottom: 6px; }
 }
 
 .doc {
-  max-width: 760px; background: var(--surface); border: 1px solid var(--border);
+  max-width: 760px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border);
   border-radius: 20px; padding: clamp(20px, 4vw, 40px); box-shadow: var(--shadow);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
@@ -114,3 +114,15 @@ li { margin-bottom: 6px; }
 .site-footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
 .site-footer a { color: var(--text-muted); }
 .site-footer a:hover { color: var(--text); }
+
+/* Wider screens: use the room (phones and tablets keep the layout above) */
+@media (min-width: 900px) {
+  main { padding-top: 64px; }
+  .lead { font-size: 22px; max-width: 760px; }
+  .hero .lead { margin-top: 36px; }
+  .cards { gap: 24px; margin-top: 64px; }
+  .card { padding: 30px; }
+  .card h2, .card h3 { font-size: 26px; }
+  .card p { font-size: 18px; }
+  .brand img { height: 52px; }
+}
