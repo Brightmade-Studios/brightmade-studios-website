@@ -53,19 +53,10 @@ a:hover { color: var(--accent-hover); }
 }
 .brand { display: inline-flex; align-items: center; }
 .brand img { height: 46px; width: auto; display: block; }
-.nav { display: flex; gap: 18px; flex-wrap: wrap; }
-.nav a { color: var(--text-muted); text-decoration: none; font-weight: 700; }
-.nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
 /* The Customer login button in the banner: a pill in the theme's accent, not a text link */
-.site-header .nav-login { color: var(--accent-contrast); border-radius: 999px; padding: 8px 18px; font-size: 15px; white-space: nowrap; }
+.site-header .nav-login { color: var(--accent-contrast); border-radius: 999px; padding: 8px 18px; font-size: 15px; white-space: nowrap; text-decoration: none; }
 .site-header .nav-login:hover { color: var(--accent-contrast); }
-.site-header .wrap { justify-content: flex-start; }
-.site-header .brand { margin-right: auto; }
-/* Phones: logo and button share the top row, the links drop to a row of their own */
-@media (max-width: 560px) {
-  .site-header .nav-login { order: 2; }
-  .site-header .nav { order: 3; flex-basis: 100%; }
-}
+.site-header .wrap { justify-content: space-between; }
 
 /* Main */
 main { flex: 1; padding: 48px 0 64px; }
