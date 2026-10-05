@@ -22,6 +22,13 @@
   --header-bg: rgba(7, 8, 26, 0.6);
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 
+  /* Phone mockups on the Custom Orders page */
+  --device-frame: #0c0c1c;
+  --device-edge: rgba(214, 204, 255, 0.45);
+  --device-glow: rgba(150, 120, 255, 0.45);
+  --device-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 60px rgba(106, 76, 240, 0.25);
+  --device-sheen: rgba(255, 255, 255, 0.14);
+
   /* Logo animation */
   --spark: #d6ccff;
   --trail: #c9bcff;
