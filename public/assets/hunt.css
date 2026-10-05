@@ -74,10 +74,10 @@ html:not(.js) .inline-shot { display: block; margin-bottom: 20px; width: min(60v
 
 @media (max-width: 820px) {
   .scrolly { grid-template-columns: 1fr; gap: 0; margin-top: 40px; }
-  .scrolly-visual { position: sticky; top: 70px; z-index: 2; align-self: start; padding: 8px 0 28px; background: linear-gradient(to bottom, var(--bg) 78%, transparent); }
+  .scrolly-visual { position: sticky; top: 70px; z-index: 2; align-self: start; margin: 0 -24px; padding: 10px 24px 14px; background: var(--bg); box-shadow: 0 14px 18px var(--bg); }
   .scrolly-sticky { position: static; }
-  .scrolly-phone { width: auto; height: min(42vh, 360px); }
-  .step-card { min-height: 60vh; justify-content: flex-start; padding-top: 12px; }
+  .scrolly-phone { width: auto; height: min(34vh, 300px); }
+  .step-card { min-height: 56vh; justify-content: flex-start; padding-top: 28px; }
   html:not(.js) .scrolly-visual { display: none; }
 }
 @media (max-width: 760px) {
