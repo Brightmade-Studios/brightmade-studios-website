@@ -1,22 +1,55 @@
-// Custom Orders page: pointer tilt for the phones and a scroll-in for each story section.
+// Custom Orders page: hero stage tilt, plus the pinned-phone scroll story.
 (function () {
-  var root = document.documentElement;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  var items = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !reduce) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.25 });
-    items.forEach(function (el) { io.observe(el); });
-  } else {
-    items.forEach(function (el) { el.classList.add("in"); });
+  // Pinned phone: the screen follows whichever step is at the middle of the viewport,
+  // and the phone turns gently as each step scrolls past.
+  var phone = document.querySelector(".scrolly-phone");
+  var steps = Array.prototype.slice.call(document.querySelectorAll(".step-card"));
+  var shots = phone ? phone.querySelectorAll("img[data-shot]") : [];
+  var current = null;
+
+  function show(step) {
+    if (step === current) return;
+    current = step;
+    steps.forEach(function (s) { s.classList.toggle("active", s === step); });
+    var name = step.getAttribute("data-shot");
+    Array.prototype.forEach.call(shots, function (img) {
+      img.classList.toggle("active", img.getAttribute("data-shot") === name);
+    });
   }
+
+  function update() {
+    var mid = window.innerHeight * 0.5;
+    var found = steps[0];
+    steps.forEach(function (s, i) {
+      var r = s.getBoundingClientRect();
+      if (r.top <= mid) found = s;
+      if (!reduce && r.top <= mid && r.bottom > mid) {
+        var t = (mid - r.top) / r.height;
+        var dir = i % 2 === 0 ? 1 : -1;
+        phone.style.setProperty("--ry", (dir * (t - 0.5) * -34).toFixed(1) + "deg");
+        phone.style.setProperty("--rx", (5 - Math.abs(t - 0.5) * 8).toFixed(1) + "deg");
+      }
+    });
+    show(found);
+  }
+
+  if (phone && steps.length) {
+    var ticking = false;
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { ticking = false; update(); });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    update();
+  }
+
   if (reduce) return;
 
-  // Whole stage tilts toward the pointer, so the three phones shift in depth against each other.
+  // Hero stage tilts toward the pointer, so the three phones shift in depth against each other.
   var stage = document.querySelector(".stage");
   if (stage) {
     var inner = stage.querySelector(".stage-inner");
@@ -32,21 +65,4 @@
       inner.style.setProperty("--sx", "0deg");
     });
   }
-
-  // Each story phone leans toward the pointer too, with a light sheen across the glass.
-  document.querySelectorAll(".tilt").forEach(function (p) {
-    p.addEventListener("pointermove", function (ev) {
-      var r = p.getBoundingClientRect();
-      var x = (ev.clientX - r.left) / r.width - 0.5;
-      var y = (ev.clientY - r.top) / r.height - 0.5;
-      p.style.setProperty("--ry", (x * 26).toFixed(1) + "deg");
-      p.style.setProperty("--rx", (-y * 18).toFixed(1) + "deg");
-      p.style.setProperty("--shine", (x * 80).toFixed(0) + "%");
-    });
-    p.addEventListener("pointerleave", function () {
-      p.style.setProperty("--ry", "0deg");
-      p.style.setProperty("--rx", "0deg");
-      p.style.setProperty("--shine", "-40%");
-    });
-  });
 })();
