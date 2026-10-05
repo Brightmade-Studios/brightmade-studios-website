@@ -74,7 +74,9 @@ html:not(.js) .inline-shot { display: block; margin-bottom: 20px; width: min(60v
 
 @media (max-width: 820px) {
   .scrolly { grid-template-columns: 1fr; gap: 0; margin-top: 40px; }
-  .scrolly-visual { position: sticky; top: 70px; z-index: 2; align-self: start; margin: 0 -24px; padding: 10px 24px 14px; background: var(--bg); box-shadow: 0 14px 18px var(--bg); }
+  .scrolly-visual { position: sticky; top: 70px; z-index: 2; align-self: start; padding: 10px 0 14px; }
+  /* Text dissolves as it slides up under the phone; hunt.js sets --cut to where the phone ends (mask alpha only, not a visible color) */
+  .step-copy { -webkit-mask-image: linear-gradient(to bottom, transparent var(--cut, -100px), black calc(var(--cut, -100px) + 80px)); mask-image: linear-gradient(to bottom, transparent var(--cut, -100px), black calc(var(--cut, -100px) + 80px)); }
   .scrolly-sticky { position: static; }
   .scrolly-phone { width: auto; height: min(34vh, 300px); }
   .step-card { min-height: 56vh; justify-content: flex-start; padding-top: 28px; }

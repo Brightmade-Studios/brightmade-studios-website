@@ -33,6 +33,17 @@
       }
     });
     show(found);
+
+    // Small screens: fade each step's text out as it passes under the pinned phone.
+    var visual = document.querySelector(".scrolly-visual");
+    var small = window.matchMedia("(max-width: 820px)").matches;
+    var bottom = small && visual ? visual.getBoundingClientRect().bottom : 0;
+    steps.forEach(function (s) {
+      var copy = s.querySelector(".step-copy");
+      if (!copy) return;
+      if (small) copy.style.setProperty("--cut", (bottom - copy.getBoundingClientRect().top - 6).toFixed(0) + "px");
+      else copy.style.removeProperty("--cut");
+    });
   }
 
   if (phone && steps.length) {
