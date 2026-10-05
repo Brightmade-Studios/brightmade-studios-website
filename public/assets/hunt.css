@@ -96,3 +96,12 @@ html:not(.js) .inline-shot { display: block; margin-bottom: 20px; width: min(60v
   .stage .phone { animation: none; }
   .stage-inner, .phone .screen::after, .scrolly-phone .screen img, .step-card { transition: none; }
 }
+
+/* Custom Orders index cards, back link and the "next app" suggestion */
+.back { margin: 0 0 12px; font-size: 15px; }
+.app-cards { margin-top: 32px; }
+.app-card { display: flex; gap: 18px; align-items: flex-start; }
+.app-card h2, .app-card h3 { margin: 0 0 6px; }
+.app-icon { width: 64px; height: 64px; border-radius: 16px; box-shadow: var(--device-shadow); flex: none; }
+.next-app { max-width: 640px; margin: 48px auto 32px; }
+.next-app h2 { font-size: 22px; text-align: center; margin: 0 0 16px; }
