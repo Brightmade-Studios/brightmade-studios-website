@@ -83,6 +83,11 @@ li { margin-bottom: 6px; }
 .card h2, .card h3 { margin-top: 0; }
 .card p:last-child { margin-bottom: 0; }
 .card a, .doc a { overflow-wrap: anywhere; }
+/* Whole card is one link; other links inside it stay clickable above the overlay */
+.card-link { position: relative; transition: border-color .2s, transform .2s; }
+.card-link:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card-link .stretch::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card-link a:not(.stretch) { position: relative; z-index: 1; }
 
 .pill {
   display: inline-block; font-size: 13px; font-weight: 800;
