@@ -139,3 +139,17 @@ li { margin-bottom: 6px; }
   .card p { font-size: 15px; line-height: 1.5; }
   .site-footer { padding: 14px 0 18px; }
 }
+
+/* Contact form */
+.form label { display: block; font-weight: 800; margin: 18px 0 6px; }
+.form input, .form textarea {
+  width: 100%; font: inherit; color: var(--text); background: var(--surface-alt);
+  border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px;
+}
+.form input:focus-visible, .form textarea:focus-visible { border-color: var(--accent); }
+.form textarea { resize: vertical; min-height: 140px; }
+.form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form + .callout, .form ~ .muted { margin-top: 24px; }
+.form .button { margin-top: 8px; border: 0; font: inherit; font-weight: 800; cursor: pointer; }
+.form .button:disabled { opacity: 0.6; cursor: default; }
+.form-status { color: var(--error); min-height: 1.6em; margin: 14px 0 0; }
