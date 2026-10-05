@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start your custom app | Brightmade Studios</title>
+  <meta name="description" content="Tell us what you want built and we will write back.">
+  <meta name="theme-color" content="#07081a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Start your custom app | Brightmade Studios">
+  <meta property="og:description" content="Tell us what you want built and we will write back.">
+  <meta property="og:image" content="https://brightmadestudios.com/assets/logo/icon-512.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/theme.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
+      <a class="button nav-login" href="https://customer.brightmadestudios.com">Customer login</a>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+<div class="doc">
+        <h1>Start your custom app</h1>
+        <p class="lead">Tell us what you have in mind, even if it is only a rough idea. We read every message and write back with an honest answer on what it takes.</p>
+        <form id="contact-form" class="form" novalidate>
+          <label for="cf-name">Your name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+          <label for="cf-email">Your email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+          <label for="cf-message">What do you want built?</label>
+          <textarea id="cf-message" name="message" rows="6" maxlength="4000" required></textarea>
+          <label for="cf-budget">Budget or timeline <span class="muted">(optional)</span></label>
+          <input id="cf-budget" name="budget" type="text" maxlength="200">
+          <div class="hp" aria-hidden="true"><label for="cf-company">Company</label><input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+          <p id="cf-status" class="form-status" role="status" aria-live="polite"></p>
+          <button class="button" type="submit">Send</button>
+        </form>
+        <div id="cf-done" class="callout" role="status" hidden>
+          <p><strong>Thank you, we got it.</strong> We will write back to the email you gave us, usually within two business days.</p>
+          <p><a href="/">Back to the home page</a></p>
+        </div>
+        <noscript><p>This form needs JavaScript. You can also email <a href="mailto:contact@brightmadestudios.com">contact@brightmadestudios.com</a>.</p></noscript>
+        <p class="muted">Prefer email? Write to <a href="mailto:contact@brightmadestudios.com">contact@brightmadestudios.com</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Brightmade Studios LLC</span>
+      <nav aria-label="Footer">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete account</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/galaxy.js" defer></script>
+  <script src="/assets/contact.js" defer></script>
+</body>
+</html>
