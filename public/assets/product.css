@@ -60,6 +60,35 @@ section.principles, section.included, section.compare, section.faq, section.get,
 .sources li:target { color: var(--text); }
 .sources a { overflow-wrap: anywhere; }
 
+/* Selling points under the intro */
+section.selling { margin: 40px auto 0; }
+.selling-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.selling-grid h3 { color: var(--accent); margin-top: 0; }
+.selling-grid p { margin-bottom: 0; color: var(--text-muted); }
+
+/* Comparison extras: a short description under each name, and the savings column */
+.compare-table .what { display: block; font-weight: 400; font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.compare-table .save { font-weight: 800; color: var(--star-gold); }
+.compare-table .ours .save { color: var(--accent-hover); }
+.compare > .lead strong { color: var(--star-gold); }
+
+/* On a phone the comparison becomes one card per product, so the savings are never scrolled out of sight */
+@media (max-width: 700px) {
+  .compare .table-wrap { overflow: visible; border: 0; background: none; box-shadow: none; }
+  .compare-table, .compare-table tbody, .compare-table tr, .compare-table th, .compare-table td { display: block; min-width: 0; }
+  .compare-table thead { display: none; }
+  .compare-table tr { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; margin-bottom: 12px; padding: 6px 0; box-shadow: var(--shadow); }
+  .compare-table tbody th { border-bottom: 1px solid var(--border); }
+  .compare-table td { display: flex; justify-content: space-between; gap: 16px; border-bottom: 0; padding: 8px 16px; text-align: right; }
+  .compare-table td::before { content: attr(data-label); color: var(--text-muted); font-weight: 700; text-align: left; flex: 0 0 auto; }
+}
+
+/* A call to action between the comparison and the questions */
+section.cta-band { margin: 56px auto 0; text-align: center; max-width: 760px; background: var(--pill-bg); border: 1px solid var(--border); border-radius: 24px; padding: 32px 24px; }
+.cta-band h2 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 32px); }
+.cta-band p { margin: 0 0 16px; color: var(--text-muted); }
+.cta-band p:last-child { margin-bottom: 0; }
+
 /* Desktop: the hero becomes text beside the phones, and long single columns spread out */
 .get-steps { margin: 4px 0 20px; }
 .get-steps li { margin-bottom: 8px; }
