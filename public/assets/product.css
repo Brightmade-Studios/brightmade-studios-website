@@ -7,6 +7,7 @@
 .price { margin: 0; display: flex; align-items: baseline; justify-content: center; gap: 12px; }
 .price-now { font-size: clamp(44px, 9vw, 64px); font-weight: 900; color: var(--text); line-height: 1; }
 .price-was { font-size: 24px; color: var(--text-muted); }
+.price-once { display: inline-block; margin: 12px 0 0; padding: 6px 14px; border-radius: 999px; background: var(--pill-bg); color: var(--star-gold); font-weight: 800; }
 .price-note { color: var(--text-muted); margin: 10px 0 18px; }
 .price-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .button-ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
