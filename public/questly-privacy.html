@@ -36,6 +36,7 @@
           <li>Each family&#x27;s Questly is its own separate app with its own database. No other family can see it.</li>
           <li>Children do not give Questly their email, phone number, address, location, voice or photo. They have no way to message anyone.</li>
           <li>Questly has no ads, no analytics, no tracking and nothing to buy inside it. We never sell information or use it for advertising.</li>
+          <li>Your family&#x27;s characters are never public. They are only sent to someone signed in to your family&#x27;s Questly, and the app&#x27;s icon and sign in screen show no one.</li>
           <li>A parent gives us written consent before we create a child&#x27;s sign in.</li>
           <li>A parent can see everything Questly holds about their child, and can ask us to delete it at any time.</li>
         </ul>
@@ -76,7 +77,8 @@
 
         <h2>The characters</h2>
         <p>Each person in your family appears in Questly as a cartoon character. To make them, we use the photos or descriptions you send us. We create the characters with Google&#x27;s Gemini image generation service, under terms where Google does not use what we send it to train its models, and then finish them by hand. We do not create face templates or any other biometric identifier.</p>
-        <p>We delete the photos you sent within 30 days after you approve the finished characters, and do the same for any photos you send for your character update. The finished characters become part of your family&#x27;s app. Like the app&#x27;s other pictures, they are files on your app&#x27;s web address, which is not listed or linked anywhere, and each file is named with the person&#x27;s first name.</p>
+        <p>We delete the photos you sent within 30 days after you approve the finished characters, and do the same for any photos you send for your character update.</p>
+        <p><strong>The finished characters are private to your family.</strong> Because they are drawn from photos of real people, often children, we do not publish them as files on your app&#x27;s web address. They are held by the small Cloudflare service that runs Questly for your family, which sends a character only to a device signed in to your family&#x27;s Questly, after checking that sign in with Google. Anyone else who asks gets nothing, even if they know the app&#x27;s address. Everything a device loads before anyone signs in, including the home screen icon and the sign in screen, shows the Questly logo and no family member. The app&#x27;s code, which a browser loads before sign in, contains the first names it uses to greet each person, and no pictures, ages or other details about them.</p>
 
         <h2>How we use information</h2>
         <ul>
@@ -95,7 +97,7 @@
         <ul>
           <li><strong>Google (Firebase)</strong>: sign in, the database, hosting the app, and delivering notifications through Firebase Cloud Messaging.</li>
           <li><strong>Google (Gemini)</strong>: making the characters, from the photos or descriptions you send us.</li>
-          <li><strong>Cloudflare</strong>: runs the small service that checks a child&#x27;s request, counts what is waiting and sends the notification. It reads the family&#x27;s database for that purpose and does not keep a copy of it.</li>
+          <li><strong>Cloudflare</strong>: runs the small service that checks a child&#x27;s request, counts what is waiting and sends the notification. It reads the family&#x27;s database for that purpose and does not keep a copy of it. The same service holds your family&#x27;s characters and sends them only to signed in family members.</li>
           <li><strong>Apple, Google and Mozilla push services</strong>: carry the notification text to a parent&#x27;s device, depending on the device and browser.</li>
           <li><strong>Resend</strong>: delivers the Get Questly and referral form to our inbox by email.</li>
         </ul>
@@ -126,7 +128,7 @@
         <p>We never keep children&#x27;s information indefinitely, and we keep it only for the reasons above.</p>
 
         <h2>Security</h2>
-        <p>Every request to a family&#x27;s database is checked against access rules on Google&#x27;s servers, so a person can only read and write what their role allows, and a child&#x27;s tap can only ever create a request. All connections are encrypted. Only the Brightmade people who build and support Questly can reach a family&#x27;s project. We keep a written information security program for children&#x27;s information, with a named person responsible for it, and review it at least once a year. No system is perfectly secure. If we learn of a breach that affects your family, we will tell you promptly.</p>
+        <p>Every request to a family&#x27;s database is checked against access rules on Google&#x27;s servers, so a person can only read and write what their role allows, and a child&#x27;s tap can only ever create a request. Your family&#x27;s characters are only sent to a signed in family member. All connections are encrypted. Only the Brightmade people who build and support Questly can reach a family&#x27;s project. We keep a written information security program for children&#x27;s information, with a named person responsible for it, and review it at least once a year. No system is perfectly secure. If we learn of a breach that affects your family, we will tell you promptly.</p>
 
         <h2>Your other rights</h2>
         <p>Depending on where you live, you may have more rights over your information under local law, and we will honor them. To use any right in this policy, email <a href="mailto:contact@brightmadestudios.com">contact@brightmadestudios.com</a>.</p>
