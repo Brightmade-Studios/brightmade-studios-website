@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share Questly | Brightmade Studios</title>
+  <meta name="description" content="Know a family who would love Questly? Share this code or link and they get 10% off.">
+  <meta name="theme-color" content="#07081a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Share Questly | Brightmade Studios">
+  <meta property="og:description" content="Families you refer get 10% off Questly, the chores and rewards app made for your family.">
+  <meta property="og:image" content="https://brightmadestudios.com/assets/questly/share.jpg">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/theme.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/product.css">
+</head>
+<body>
+  <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
+      <a class="button nav-login" href="https://customer.brightmadestudios.com">Customer login</a>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <div class="doc refer">
+        <p class="back no-print"><a href="/questly">&larr; Questly</a></p>
+        <h1>Share Questly, give 10% off</h1>
+        <p class="lead">Know a family who would love Questly? Point their phone camera at this code. They get 10% off, so their launch price is $135 instead of $150.</p>
+        <img class="qr" src="/assets/questly/refer-qr.svg" alt="QR code that opens the Get Questly form on brightmadestudios.com with the 10% referral discount" width="280" height="280">
+        <p class="refer-link" id="refer-link">brightmadestudios.com/questly?ref=qr</p>
+        <div class="refer-actions">
+          <button class="button" type="button" id="refer-share" hidden>Share the link</button>
+          <button class="button button-ghost" type="button" id="refer-copy">Copy the link</button>
+          <button class="button button-ghost" type="button" id="refer-print">Print this card</button>
+        </div>
+        <form class="form no-print" id="refer-name-form" onsubmit="return false">
+          <label for="refer-name">Want them to know it was you? <span class="muted">(optional)</span></label>
+          <input id="refer-name" type="text" maxlength="60" autocomplete="name" placeholder="Your first name">
+          <p class="muted small">Your name goes into the link you share or copy, and shows up on their form. It is not saved anywhere until they send it.</p>
+        </form>
+        <div class="refer-steps">
+          <h2>How it works</h2>
+          <ol>
+            <li>They scan the code or open the link. It takes them to the Get Questly form, with the referral already ticked.</li>
+            <li>They leave their name, email and phone number, and we get in touch.</li>
+            <li>When they buy, 10% comes off their price.</li>
+          </ol>
+          <p class="muted small">One referral discount per family, for families buying Questly for the first time. See the <a href="/questly-terms#referrals">referral terms</a>.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Brightmade Studios LLC</span>
+      <nav aria-label="Footer">
+        <a href="/questly-privacy">Questly privacy</a>
+        <a href="/questly-terms">Questly terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+        <a href="/delete-account">Delete account</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/galaxy.js" defer></script>
+  <script src="/assets/questly-refer.js" defer></script>
+</body>
+</html>
