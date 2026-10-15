@@ -60,6 +60,45 @@ section.principles, section.included, section.compare, section.faq, section.get,
 .sources li:target { color: var(--text); }
 .sources a { overflow-wrap: anywhere; }
 
+/* Desktop: the hero becomes text beside the phones, and long single columns spread out */
+.get-steps { margin: 4px 0 20px; }
+.get-steps li { margin-bottom: 8px; }
+
+@media (min-width: 1000px) {
+  .product-hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 24px;
+    min-height: min(760px, calc(100vh - 140px));
+  }
+  .product-hero .co-hero { text-align: left; }
+  .product-hero .co-hero .lead { margin-left: 0; font-size: 21px; }
+  .product-hero .hunt-icon { margin: 0 0 18px; }
+  .product-hero h1 { font-size: 64px; margin-bottom: 12px; }
+  .product-hero .price-hero { margin: 28px 0 0; }
+  .product-hero .price, .product-hero .price-actions { justify-content: flex-start; }
+  .product-hero .price-now { font-size: 72px; }
+  .product-hero .stage { margin: 0; height: 640px; max-width: none; }
+  .product-hero .stage .phone { width: 210px; }
+  .product-hero .stage .p-center { width: 260px; }
+  .product-hero .stage .p-left { transform: translate(-50%, -50%) translate3d(-185px, 30px, -80px) rotateY(24deg); }
+  .product-hero .stage .p-right { transform: translate(-50%, -50%) translate3d(185px, 30px, -80px) rotateY(-24deg); }
+
+  .hunt-intro { margin-top: 56px; }
+  .hunt-intro .tagline { font-size: 26px; max-width: 820px; }
+  .hunt-intro .muted { max-width: 820px; font-size: 18px; }
+
+  .scrolly { gap: 80px; }
+  .scrolly-phone { width: 300px; }
+  .step-copy h3 { font-size: 36px; }
+  .step-copy p { font-size: 19px; max-width: 520px; }
+
+  .faq { max-width: 1100px; }
+  .faq-list { columns: 2; column-gap: 16px; }
+  .faq-list details { break-inside: avoid; margin: 0 0 10px; }
+
+  .get .doc { max-width: 1100px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 56px; align-items: start; padding: 48px; }
+  .get-intro h2 { font-size: 34px; }
+}
+
 /* Referral card */
 .refer { text-align: center; }
 .refer .lead { margin-left: auto; margin-right: auto; }

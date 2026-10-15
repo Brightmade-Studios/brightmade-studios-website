@@ -29,6 +29,7 @@
   </header>
   <main>
     <div class="wrap">
+      <div class="product-hero">
       <section class="co-hero">
         <p class="back"><a href="/apps">&larr; All apps</a></p>
         <img class="hunt-icon" src="/assets/questly/icon.webp" alt="The Questly app icon, two children and a gold star" width="96" height="96">
@@ -48,6 +49,7 @@
           <div class="phone p-center"><div class="screen"><img src="/assets/questly/today.webp" alt="A child&#x27;s cartoon character stands on a floating grass island under a pale morning sky, with a gold coin showing 23 stars and a saving goal above, a treasure chest alongside, and a list of jobs below reading Feed the cat, Brush teeth and Make your bed." width="390" height="844" loading="lazy"></div></div>
           <div class="phone p-right"><div class="screen"><img src="/assets/questly/draw.webp" alt="A sheet of cartoon stationery headed What do you want to save for, with a blue line drawing of a bicycle and a green line of ground under it, a row of ten colour buttons, three pen shapes and an Undo button below." width="390" height="844" loading="lazy"></div></div>
         </div>
+      </div>
       </div>
 
       <section class="hunt-intro">
@@ -221,6 +223,7 @@
 
       <section class="faq" aria-labelledby="faq-title">
         <h2 id="faq-title">Questions</h2>
+        <div class="faq-list">
         <details>
           <summary>What devices does it run on?</summary>
           <p>Any recent iPhone, iPad, Android phone or tablet, or computer with an up to date web browser. Questly is installed to the home screen like an app. On iPhone and iPad, notifications need iOS or iPadOS 16.4 or later, and Questly added to the Home Screen.</p>
@@ -253,13 +256,22 @@
           <summary>What if it is not right for us?</summary>
           <p>Tell us within 14 days of your Questly being delivered and we will refund you in full. The <a href="/questly-terms">Questly terms</a> have the details.</p>
         </details>
+        </div>
       </section>
 
       <section id="get" class="get" aria-labelledby="get-title">
         <div class="doc">
+          <div class="get-intro">
           <h2 id="get-title">Get Questly for your family</h2>
           <p id="get-referred" class="referred" hidden><strong>You were referred, so you get 10% off.</strong> Your launch price is <strong>$135</strong> instead of $150.</p>
           <p>Leave your details and we will be in touch to talk it through. Nothing is charged until you have said yes to a written quote.</p>
+          <ul class="ticks get-steps">
+            <li>We call or email to hear about your family</li>
+            <li>You get a written quote, held for 30 days</li>
+            <li>Once you say yes, we draw your characters and set everything up with you</li>
+          </ul>
+          </div>
+          <div class="get-body">
           <form id="get-form" class="form" novalidate>
             <label for="gf-name">Your name</label>
             <input id="gf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
@@ -283,6 +295,7 @@
             <p><strong>Thank you, we got it.</strong> We will be in touch by email or phone, usually within two business days.</p>
           </div>
           <noscript><p>This form needs JavaScript. You can also email <a href="mailto:contact@brightmadestudios.com">contact@brightmadestudios.com</a> with your name and phone number.</p></noscript>
+          </div>
         </div>
         <p class="share-line">Know a family who would love Questly? <a href="/questly-refer">Share it, and they get 10% off</a>.</p>
       </section>
