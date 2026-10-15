@@ -15,6 +15,7 @@ To re-run a deploy without a code change: **Actions > Deploy > Run workflow** on
 - `public/` is the site. Plain HTML and CSS, no build step.
 - `public/assets/theme.css` is the only place colors are defined. The site is dark only, with a galaxy background (`galaxy.js`) and colors taken from the logo.
 - `public/assets/logo/` holds the logo. The home page plays the animated intro once on load (`logo.css`, `logo.js`); the header uses the static `logo.svg`.
+- `public/questly.html` is the Questly product page; `questly-privacy.html` and `questly-terms.html` are its own privacy policy and terms; `questly-refer.html` is the printable referral card with the QR code.
 - `scripts/check-site.mjs` runs on every pull request.
 - `scripts/deploy-hosting.mjs` publishes `public/` through the Firebase Hosting REST API with a short-lived token.
 - `docs/keyless-setup.md` is the one-time Google Cloud setup that lets GitHub deploy.

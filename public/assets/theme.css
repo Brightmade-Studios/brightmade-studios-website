@@ -30,6 +30,12 @@
   --device-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 60px rgba(106, 76, 240, 0.25);
   --device-sheen: rgba(255, 255, 255, 0.14);
 
+  /* App product pages: the star on "What you get", and the referral QR card (dark on white so it scans, and prints) */
+  --star-gold: #ffd166;
+  --qr-light: #ffffff;
+  --print-bg: #ffffff;
+  --print-text: #12103a;
+
   /* Logo animation */
   --spark: #d6ccff;
   --trail: #c9bcff;
