@@ -153,3 +153,38 @@ li { margin-bottom: 6px; }
 .form .button { margin-top: 8px; border: 0; font: inherit; font-weight: 800; cursor: pointer; }
 .form .button:disabled { opacity: 0.6; cursor: default; }
 .form-status { color: var(--error); min-height: 1.6em; margin: 14px 0 0; }
+
+/* Main navigation: a row on wide screens, a drop-down menu on phones (nav.js adds the .js class) */
+.site-nav { display: flex; align-items: center; gap: 4px 6px; flex-wrap: wrap; }
+.site-nav a:not(.button) {
+  color: var(--text); text-decoration: none; font-weight: 800; font-size: 15px;
+  padding: 8px 12px; border-radius: 999px; transition: background .2s, color .2s;
+}
+.site-nav a:not(.button):hover { background: var(--pill-bg); color: var(--accent-hover); }
+.site-nav a[aria-current="page"]:not(.button) { background: var(--pill-bg); color: var(--pill-text); }
+.site-nav .nav-login { margin-left: 8px; }
+.nav-toggle {
+  display: none; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px;
+  width: 44px; height: 44px; cursor: pointer; color: var(--text); padding: 0; position: relative;
+}
+.nav-toggle .bars, .nav-toggle .bars::before, .nav-toggle .bars::after {
+  position: absolute; left: 12px; width: 20px; height: 2px; background: currentColor; border-radius: 2px; content: "";
+  transition: transform .2s, top .2s, opacity .2s;
+}
+.nav-toggle .bars { top: 21px; }
+.nav-toggle .bars::before { top: -6px; left: 0; }
+.nav-toggle .bars::after { top: 6px; left: 0; }
+.nav-toggle[aria-expanded="true"] .bars { background: transparent; }
+.nav-toggle[aria-expanded="true"] .bars::before { top: 0; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bars::after { top: 0; transform: rotate(-45deg); }
+
+@media (max-width: 899px) {
+  .js .nav-toggle { display: inline-block; }
+  .js .site-nav { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; padding: 8px 0 10px; }
+  .js .site-nav.open { display: flex; }
+  .js .site-nav a:not(.button) { padding: 12px 14px; font-size: 17px; }
+  .js .site-nav .nav-login { margin: 8px 0 0; text-align: center; }
+}
+@media (max-width: 899px) {
+  html:not(.js) .site-header .wrap { justify-content: center; }
+}

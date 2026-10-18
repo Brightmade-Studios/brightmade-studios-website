@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Brightmade Studios</title>
+  <meta name="description" content="Simple pricing for digital event experiences: $100 an hour per screen, $250 an hour for all three, with a two hour minimum.">
+  <meta name="theme-color" content="#07081a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://brightmadestudios.com/pricing">
+  <meta property="og:title" content="Pricing | Brightmade Studios">
+  <meta property="og:description" content="Simple pricing for digital event experiences: $100 an hour per screen, $250 an hour for all three, with a two hour minimum.">
+  <meta property="og:image" content="https://brightmadestudios.com/assets/logo/icon-512.png">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/theme.css">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/fun.css">
+  <script src="/assets/nav.js"></script>
+</head>
+<body>
+  <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/experiences">Experiences</a>
+        <a href="/pricing" aria-current="page">Pricing</a>
+        <a href="/apps">Apps</a>
+        <a href="/custom-orders">Custom builds</a>
+        <a href="/about">About</a>
+        <a href="/contact">Book us</a>
+        <a class="button nav-login" href="https://customer.brightmadestudios.com">Customer login</a>
+      </nav>
+    </div>
+  </header>
+  <main class="fun">
+    <div class="wrap">
+      <section class="page-hero">
+        <span class="eyebrow">Pricing</span>
+        <h1>Simple pricing. <span class="shimmer">No surprises.</span></h1>
+        <p class="lead">One hourly price for each screen. Put all three in the room and the price drops. Everything you pay for is on this page.</p>
+      </section>
+
+      <section class="section">
+        <div class="price-grid">
+        <div class="price-card lion">
+          <h3>Lion Mirror</h3>
+          <div class="price">$100<small> an hour</small></div>
+          <p>One screen. The lion copies every move and takes the photo.</p>
+          <p class="note">1 screen</p>
+        </div>
+        <div class="price-card letter">
+          <h3>Letter to Santa</h3>
+          <div class="price">$100<small> an hour</small></div>
+          <p>One screen. Handwriting flies to the North Pole.</p>
+          <p class="note">1 screen</p>
+        </div>
+        <div class="price-card elf">
+          <h3>Elfie Selfie Station</h3>
+          <div class="price">$100<small> an hour</small></div>
+          <p>One screen. A live elf filter and an elf portrait.</p>
+          <p class="note">1 screen</p>
+        </div>
+        <div class="price-card  featured"><span class="badge">Best value</span>
+          <h3>Full Experience</h3>
+          <div class="price">$250<small> an hour</small></div>
+          <p>All three screens in one room. That is $50 an hour less than booking them one by one.</p>
+          <p class="note">3 screens</p>
+        </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>The simple rules</h2></div>
+        <div class="rules">
+          <div class="rule"><strong>2 hour minimum</strong><p>Every booking is at least two hours of guest time.</p></div>
+          <div class="rule"><strong>Setup and teardown: <span class="amount">$50</span> per screen</strong><p>We arrive early, set up, and pack up after. Your booked hours are all guest time.</p></div>
+          <div class="rule"><strong>Travel</strong><p>Free within about 20 miles of us. Farther than that, a small mileage charge that we quote up front.</p></div>
+          <div class="rule"><strong>Overtime</strong><p>Running late is fine. Extra time is billed in half hour steps at the same hourly price.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Estimate your event</h2>
+          <p class="lead">A quick way to see roughly what it costs. We confirm everything in writing before you commit.</p>
+        </div>
+        <form class="calc" id="estimate" onsubmit="return false">
+          <div>
+            <fieldset>
+              <legend>Stations</legend>
+              <label class="opt"><input type="checkbox" name="station" value="lion" checked> Lion Mirror</label>
+              <label class="opt"><input type="checkbox" name="station" value="letter"> Letter to Santa</label>
+              <label class="opt"><input type="checkbox" name="station" value="elf"> Elfie Selfie Station</label>
+            </fieldset>
+            <fieldset>
+              <legend><label for="est-hours">Hours</label></legend>
+              <select id="est-hours" name="hours">
+                <option value="2" selected>2 hours</option><option value="2.5">2.5 hours</option><option value="3">3 hours</option><option value="3.5">3.5 hours</option>
+                <option value="4">4 hours</option><option value="5">5 hours</option><option value="6">6 hours</option><option value="8">8 hours</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>Event type</legend>
+              <label class="opt"><input type="radio" name="kind" value="personal" checked> School, party or community event</label>
+              <label class="opt"><input type="radio" name="kind" value="corporate"> Company event</label>
+            </fieldset>
+          </div>
+          <div class="calc-result" aria-live="polite">
+            <span class="muted">Estimated total</span>
+            <div class="total" id="est-total">$250</div>
+            <dl>
+              <dt>Screens</dt><dd id="est-screens"></dd>
+              <dt>Hourly price</dt><dd id="est-hourly"></dd>
+              <dt>Event time</dt><dd id="est-time"></dd>
+              <dt>Setup and teardown</dt><dd id="est-setup"></dd>
+            </dl>
+            <p class="muted" id="est-note" style="margin:14px 0 0;font-size:15px"></p>
+            <p style="margin:18px 0 0"><a class="button" href="/contact">Get a quote</a></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="two">
+          <div class="note-box">
+            <h3>Company events</h3>
+            <p><strong>$150 an hour per screen.</strong> Company events come with more polish: your logo on the photo frame, and a look built around your brand. The logo and theme work is a one time fee that we quote once we know what you want. Setup and teardown is the same $50 per screen.</p>
+          </div>
+          <div class="note-box">
+            <h3>Always included</h3>
+            <ul class="checks">
+              <li>All the equipment, set up and taken down</li>
+              <li>Someone from Brightmade running every station</li>
+              <li>A themed photo frame with your event name</li>
+              <li>A scan-to-save QR code for every photo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>Photos and privacy</h2></div>
+        <div class="note-box" id="privacy">
+          <h3>Photos and privacy, in plain words</h3>
+          <ul class="checks">
+            <li>Kids never need an account, an email address or a phone number to join in.</li>
+            <li>Photos are taken on our equipment. Each one gets its own private link, and only its QR code opens it.</li>
+            <li>The Elfie Selfie Station and Letter to Santa use AI. For those, the photo is sent to an AI service from Google (Gemini) so it can make the elf portrait or read the letter. The Lion Mirror follows movement right on the device and does not send photos to AI.</li>
+            <li>After your event we send the host a copy of the photos and delete them from our system. Any family can skip a station or ask us to delete their photo.</li>
+          </ul>
+          <p class="muted">Questions about photos or privacy? <a href="/contact">Write to us</a> before the day and we will answer plainly.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>Questions we hear a lot</h2></div>
+        <div class="faq">
+          <details><summary>Can we book just one station?</summary><p>Yes. Each station is one screen at $100 an hour. Two screens are $200 an hour, and all three are $250 an hour as the Full Experience.</p></details>
+          <details><summary>What do you need from us?</summary><p>A little floor space and a power outlet for each station, and a good internet connection. We check the details with you before the day.</p></details>
+          <details><summary>Can you match our theme?</summary><p>Our holiday theme is ready now. If you would like a different look, or your company logo on the frame, tell us and we will quote it.</p></details>
+          <details><summary>Is AI really involved?</summary><p>Yes, and we like to say so. The elf portraits and the letter reading use AI. The photo privacy note above explains exactly what is sent and what happens to it.</p></details>
+          <details><summary>What if the party runs long?</summary><p>No problem. Extra time is billed in half hour steps at the same hourly price.</p></details>
+          <details><summary>How do we book?</summary><p>Send us the date, the place and roughly how many guests through the <a href="/contact">contact page</a>. We write back with a clear quote.</p></details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-band">
+          <h2>Planning something bright?</h2>
+          <p class="lead">Tell us the date, the place and roughly how many guests. We will write back with a clear quote.</p>
+          <div class="btn-row">
+            <a class="button big" href="/contact">Book an experience</a>
+            <a class="button big ghost" href="/pricing">See pricing</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Brightmade Studios LLC</span>
+      <nav aria-label="Footer">
+        <a href="/experiences">Experiences</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/assets/galaxy.js" defer></script>
+  <script src="/assets/estimate.js" defer></script>
+</body>
+</html>
