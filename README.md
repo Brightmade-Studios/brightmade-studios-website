@@ -1,6 +1,6 @@
 # brightmadestudios.com
 
-The Brightmade Studios website: home, experiences (with one page per station), pricing, about, contact, apps, custom builds, support, privacy policy, terms of use and account deletion pages.
+The Brightmade Studios website: home, screen ideas, pricing, about, contact, apps, custom builds, support, privacy policy, terms of use and account deletion pages.
 
 ## How changes go live
 
