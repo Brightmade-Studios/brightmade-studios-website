@@ -29,6 +29,23 @@
           }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "source": "/lion-mirror",
+        "destination": "/experiences",
+        "type": 301
+      },
+      {
+        "source": "/letter-to-santa",
+        "destination": "/experiences",
+        "type": 301
+      },
+      {
+        "source": "/elfie-selfie-station",
+        "destination": "/experiences",
+        "type": 301
+      }
     ]
   }
 }

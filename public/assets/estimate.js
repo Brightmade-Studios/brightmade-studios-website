@@ -1,8 +1,7 @@
-// Price estimate on /pricing. The numbers here must match the price cards on the page.
+// Price estimate on /pricing. The numbers here must match the price cards and rules on the page.
 (function () {
-  var RATE = { personal: 100, corporate: 150 };
-  var BUNDLE_RATE = 250;   // all three screens, non-corporate, per hour
-  var SETUP = 50;          // per screen, once per event
+  var RATE = { personal: 100, corporate: 150 };  // per screen, per hour
+  var SETUP = 50;                                // per screen, once per event
   var form = document.getElementById("estimate");
   if (!form) return;
 
@@ -17,20 +16,13 @@
   var money = function (n) { return "$" + n.toLocaleString("en-US"); };
 
   function update() {
-    var stations = form.querySelectorAll('input[name="station"]:checked').length;
+    var screens = parseInt(form.elements.screens.value, 10);
     var hours = parseFloat(form.elements.hours.value);
     var corporate = form.elements.kind.value === "corporate";
-    if (!stations) {
-      out.total.textContent = "$0";
-      out.note.textContent = "Pick at least one station to see an estimate.";
-      out.screens.textContent = out.hourly.textContent = out.time.textContent = out.setup.textContent = "-";
-      return;
-    }
-    var bundle = stations === 3 && !corporate;
-    var hourly = bundle ? BUNDLE_RATE : stations * RATE[corporate ? "corporate" : "personal"];
-    var setup = stations * SETUP;
+    var hourly = screens * RATE[corporate ? "corporate" : "personal"];
+    var setup = screens * SETUP;
     out.total.textContent = money(hourly * hours + setup);
-    out.screens.textContent = stations + (stations === 1 ? " screen" : " screens") + (bundle ? " (Full Experience)" : "");
+    out.screens.textContent = screens + (screens === 1 ? " screen" : " screens");
     out.hourly.textContent = money(hourly) + " an hour";
     out.time.textContent = money(hourly * hours) + " for " + hours + " hours";
     out.setup.textContent = money(setup);

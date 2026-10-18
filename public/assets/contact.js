@@ -13,7 +13,7 @@
   var topic = new URLSearchParams(location.search).get("topic");
   if (topic === "app") interest.value = "Custom app or website";
 
-  function showEventFields() { eventFields.hidden = interest.value !== "Event experience"; }
+  function showEventFields() { eventFields.hidden = interest.value !== "Event screen"; }
   interest.addEventListener("change", showEventFields);
   showEventFields();
 
@@ -27,7 +27,7 @@
       return;
     }
     var lines = ["Topic: " + data.interest];
-    if (data.interest === "Event experience") {
+    if (data.interest === "Event screen") {
       lines.push("Event date: " + (data.eventdate || "not given"));
       lines.push("Guests: " + (data.guests || "not given"));
     }
