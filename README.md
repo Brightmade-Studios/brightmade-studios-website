@@ -12,6 +12,8 @@ To re-run a deploy without a code change: **Actions > Deploy > Run workflow** on
 
 ## Layout
 
+- `public/lab/` is the next version of the site (event screens, e-Maginator), kept private while it is being built: nothing links to it and every page is `noindex`. Its links all start with `/lab/`. When it is ready to launch, its files move back up to `public/` and the `/lab/` prefix comes off.
+
 - `public/` is the site. Plain HTML and CSS, no build step.
 - `public/assets/theme.css` is the only place colors are defined. The site is dark only, with a galaxy background (`galaxy.js`) and colors taken from the logo.
 - `public/assets/logo/` holds the logo; the header uses the static `logo.svg`.

@@ -28,22 +28,40 @@
             "value": "no-cache"
           }
         ]
+      },
+      {
+        "source": "/lab/**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
+      },
+      {
+        "source": "/lab",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
       }
     ],
     "redirects": [
       {
         "source": "/lion-mirror",
-        "destination": "/experiences",
+        "destination": "/",
         "type": 301
       },
       {
         "source": "/letter-to-santa",
-        "destination": "/experiences",
+        "destination": "/",
         "type": 301
       },
       {
         "source": "/elfie-selfie-station",
-        "destination": "/experiences",
+        "destination": "/",
         "type": 301
       }
     ]
