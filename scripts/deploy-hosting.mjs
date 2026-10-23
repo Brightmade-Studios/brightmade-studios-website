@@ -39,6 +39,13 @@ function servingConfig(c) {
       headers: Object.fromEntries(h.headers.map(({ key, value }) => [key, value])),
     }));
   }
+  if (c.redirects) {
+    config.redirects = c.redirects.map((r) => ({
+      glob: r.source,
+      location: r.destination,
+      statusCode: r.type || 301,
+    }));
+  }
   return config;
 }
 
