@@ -50,19 +50,19 @@
     ],
     "redirects": [
       {
-        "source": "/lion-mirror",
-        "destination": "/",
-        "type": 301
+        "source": "/westhoff-pto/privacy",
+        "destination": "https://westhoff-pto.web.app/privacy.html",
+        "type": 302
       },
       {
-        "source": "/letter-to-santa",
-        "destination": "/",
-        "type": 301
+        "source": "/westhoff-pto/delete-account",
+        "destination": "https://westhoff-pto.web.app/privacy.html#delete-account",
+        "type": 302
       },
       {
-        "source": "/elfie-selfie-station",
-        "destination": "/",
-        "type": 301
+        "source": "/westhoff-pto/support",
+        "destination": "https://westhoff-pto.web.app/privacy.html#contact",
+        "type": 302
       }
     ]
   }
