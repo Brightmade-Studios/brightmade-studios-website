@@ -1,0 +1,61 @@
+/*
+  Brightmade theme: the only place colors are defined.
+  Every other stylesheet uses these variables, never raw hex.
+  The site is dark only, with colors taken from the galaxy "B" logo.
+*/
+:root {
+  color-scheme: dark;
+
+  --bg: #07081a;
+  --bg-deep: #03040d;
+  --surface: rgba(24, 22, 60, 0.55);
+  --surface-alt: rgba(185, 168, 255, 0.08);
+  --border: rgba(185, 168, 255, 0.18);
+  --text: #ffffff;
+  --text-muted: #b9b6e6;
+  --accent: #b9a8ff;
+  --accent-hover: #d6ccff;
+  --accent-contrast: #12103a;
+  --pill-bg: rgba(185, 168, 255, 0.16);
+  --pill-text: #d6ccff;
+  --focus: #d6ccff;
+  --header-bg: rgba(7, 8, 26, 0.6);
+  --error: #ffb4c0;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+
+  /* Phone mockups on the Custom Orders page */
+  --device-frame: #0c0c1c;
+  --device-edge: rgba(214, 204, 255, 0.45);
+  --device-glow: rgba(150, 120, 255, 0.45);
+  --device-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), 0 0 60px rgba(106, 76, 240, 0.25);
+  --device-sheen: rgba(255, 255, 255, 0.14);
+
+  /* App product pages: the star on "What you get", and the referral QR card (dark on white so it scans, and prints) */
+  --star-gold: #ffd166;
+  --qr-light: #ffffff;
+  --print-bg: #ffffff;
+  --print-text: #12103a;
+
+  /* Playful accents for the experiences pages: one color per station, all friendly on the dark galaxy */
+  --pop-rose: #ff8fb1;
+  --pop-mint: #7be8c4;
+  --pop-sky: #7cc4ff;
+  --glow-lion: rgba(255, 209, 102, 0.30);
+  --glow-elf: rgba(123, 232, 196, 0.26);
+  --glow-letter: rgba(255, 143, 177, 0.28);
+  --glow-sky: rgba(124, 196, 255, 0.28);
+  --fun-gradient: linear-gradient(110deg, var(--pop-sky), var(--accent) 35%, var(--pop-rose) 70%, var(--star-gold));
+  --scrim: rgba(3, 4, 13, 0.55);
+
+  /* Logo animation */
+  --spark: #d6ccff;
+  --trail: #c9bcff;
+  --star-glow: #c9bcff;
+
+  /* Galaxy background */
+  --star: 255, 255, 255;
+  --nebula-violet: rgba(106, 76, 240, 0.35);
+  --nebula-magenta: rgba(190, 80, 220, 0.18);
+  --nebula-blue: rgba(60, 110, 255, 0.22);
+  --nebula-core: rgba(214, 204, 255, 0.10);
+}

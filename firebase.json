@@ -28,6 +28,24 @@
             "value": "no-cache"
           }
         ]
+      },
+      {
+        "source": "/lab/**",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
+      },
+      {
+        "source": "/lab",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
       }
     ],
     "redirects": [
@@ -45,16 +63,6 @@
         "source": "/westhoff-pto/support",
         "destination": "https://westhoff-pto.web.app/privacy.html#contact",
         "type": 302
-      },
-      {
-        "source": "/lab",
-        "destination": "/",
-        "type": 301
-      },
-      {
-        "source": "/lab/:page*",
-        "destination": "/:page",
-        "type": 301
       }
     ]
   }

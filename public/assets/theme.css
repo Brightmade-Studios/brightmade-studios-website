@@ -36,17 +36,6 @@
   --print-bg: #ffffff;
   --print-text: #12103a;
 
-  /* Playful accents for the experiences pages: one color per station, all friendly on the dark galaxy */
-  --pop-rose: #ff8fb1;
-  --pop-mint: #7be8c4;
-  --pop-sky: #7cc4ff;
-  --glow-lion: rgba(255, 209, 102, 0.30);
-  --glow-elf: rgba(123, 232, 196, 0.26);
-  --glow-letter: rgba(255, 143, 177, 0.28);
-  --glow-sky: rgba(124, 196, 255, 0.28);
-  --fun-gradient: linear-gradient(110deg, var(--pop-sky), var(--accent) 35%, var(--pop-rose) 70%, var(--star-gold));
-  --scrim: rgba(3, 4, 13, 0.55);
-
   /* Logo animation */
   --spark: #d6ccff;
   --trail: #c9bcff;
