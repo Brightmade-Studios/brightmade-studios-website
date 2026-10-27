@@ -1,5 +1,5 @@
 // Swaps the poster placeholder for the real video as soon as the file exists.
-// Drop experience.mp4 (and experience-poster.jpg) into /lab/assets/video/ and nothing else needs editing.
+// Drop experience.mp4 (and experience-poster.jpg) into /assets/video/ and nothing else needs editing.
 (function () {
   var slots = document.querySelectorAll(".video-slot[data-video]");
   Array.prototype.forEach.call(slots, function (slot) {
