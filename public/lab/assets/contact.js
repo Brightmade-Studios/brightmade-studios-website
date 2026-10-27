@@ -12,8 +12,11 @@
   // /contact?topic=app opens the form on the custom app choice
   var topic = new URLSearchParams(location.search).get("topic");
   if (topic === "app") interest.value = "Custom app or website";
+  if (topic === "wedding") interest.value = "Wedding package";
+  if (topic === "corporate") interest.value = "Corporate package";
 
-  function showEventFields() { eventFields.hidden = interest.value !== "Event screen"; }
+  function isEvent() { return ["Event stations", "Wedding package", "Corporate package"].indexOf(interest.value) !== -1; }
+  function showEventFields() { eventFields.hidden = !isEvent(); }
   interest.addEventListener("change", showEventFields);
   showEventFields();
 
@@ -27,7 +30,7 @@
       return;
     }
     var lines = ["Topic: " + data.interest];
-    if (data.interest === "Event screen") {
+    if (isEvent()) {
       lines.push("Event date: " + (data.eventdate || "not given"));
       lines.push("Guests: " + (data.guests || "not given"));
     }
