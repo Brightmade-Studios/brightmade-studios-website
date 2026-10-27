@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Brightmade Studios</title>
+  <meta name="description" content="Simple pricing for custom event screens: $100 an hour per screen for any theme or idea, with a two hour minimum.">
+  <meta name="theme-color" content="#07081a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://brightmadestudios.com/pricing">
+  <meta property="og:title" content="Pricing | Brightmade Studios">
+  <meta property="og:description" content="Simple pricing for custom event screens: $100 an hour per screen for any theme or idea, with a two hour minimum.">
+  <meta property="og:image" content="https://brightmadestudios.com/assets/logo/icon-512.png">
+  <link rel="icon" href="/lab/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/lab/apple-touch-icon.png">
+  <link rel="preload" href="/lab/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/lab/assets/theme.css">
+  <link rel="stylesheet" href="/lab/assets/site.css">
+  <link rel="stylesheet" href="/lab/assets/fun.css">
+  <script src="/lab/assets/nav.js"></script>
+</head>
+<body>
+  <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/lab"><img src="/lab/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/lab/experiences">Screen ideas</a>
+        <a href="/lab/pricing" aria-current="page">Pricing</a>
+        <a href="/lab/apps">Apps</a>
+        <a href="/lab/custom-orders">Custom builds</a>
+        <a href="/lab/about">About</a>
+        <a href="/lab/contact">Book us</a>
+        <a class="button nav-login" href="https://customer.brightmadestudios.com">Customer login</a>
+      </nav>
+    </div>
+  </header>
+  <main class="fun">
+    <div class="wrap">
+      <section class="page-hero">
+        <span class="eyebrow">Pricing</span>
+        <h1>Simple pricing. <span class="shimmer">No surprises.</span></h1>
+        <p class="lead">One price per screen, per hour. Whatever theme or idea you choose, the price does not change.</p>
+      </section>
+
+      <section class="section">
+        <div class="price-grid">
+          <div class="price-card featured"><span class="badge">Most popular</span>
+            <h3>One screen</h3>
+            <div class="price">$100<small> an hour</small></div>
+            <p>Any theme, any idea. We build it, bring it and run it.</p>
+            <p class="note">School nights, parties, community days and more</p>
+          </div>
+          <div class="price-card">
+            <h3>More screens</h3>
+            <div class="price">$100<small> an hour each</small></div>
+            <p>Want a bigger event? Add another screen at the same price, each with its own idea or all with one theme.</p>
+            <p class="note">Great for bigger rooms</p>
+          </div>
+          <div class="price-card">
+            <h3>Company events</h3>
+            <div class="price">$150<small> an hour per screen</small></div>
+            <p>More polish for brand events: your logo and a look built around your brand. The logo and theme work is a one time fee we quote once we know what you want.</p>
+            <p class="note">Trade shows, open houses, parties</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>The simple rules</h2></div>
+        <div class="rules">
+          <div class="rule"><strong>2 hour minimum</strong><p>Every booking is at least two hours of guest time.</p></div>
+          <div class="rule"><strong>Setup and teardown: <span class="amount">$50</span> per screen</strong><p>We arrive early, set up, and pack up after. Your booked hours are all guest time.</p></div>
+          <div class="rule"><strong>Travel</strong><p>Free within about 20 miles of us. Farther than that, a small mileage charge that we quote up front.</p></div>
+          <div class="rule"><strong>Overtime</strong><p>Running late is fine. Extra time is billed in half hour steps at the same hourly price.</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>Estimate your event</h2>
+          <p class="lead">A quick way to see roughly what it costs. We confirm everything in writing before you commit.</p>
+        </div>
+        <form class="calc" id="estimate" onsubmit="return false">
+          <div>
+            <fieldset>
+              <legend><label for="est-screens-in">Screens</label></legend>
+              <select id="est-screens-in" name="screens">
+                <option value="1" selected>1 screen</option><option value="2">2 screens</option><option value="3">3 screens</option>
+                <option value="4">4 screens</option><option value="5">5 screens</option><option value="6">6 screens</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend><label for="est-hours">Hours</label></legend>
+              <select id="est-hours" name="hours">
+                <option value="2" selected>2 hours</option><option value="2.5">2.5 hours</option><option value="3">3 hours</option><option value="3.5">3.5 hours</option>
+                <option value="4">4 hours</option><option value="5">5 hours</option><option value="6">6 hours</option><option value="8">8 hours</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <legend>Event type</legend>
+              <label class="opt"><input type="radio" name="kind" value="personal" checked> School, party or community event</label>
+              <label class="opt"><input type="radio" name="kind" value="corporate"> Company event</label>
+            </fieldset>
+          </div>
+          <div class="calc-result" aria-live="polite">
+            <span class="muted">Estimated total</span>
+            <div class="total" id="est-total">$250</div>
+            <dl>
+              <dt>Screens</dt><dd id="est-screens"></dd>
+              <dt>Hourly price</dt><dd id="est-hourly"></dd>
+              <dt>Event time</dt><dd id="est-time"></dd>
+              <dt>Setup and teardown</dt><dd id="est-setup"></dd>
+            </dl>
+            <p class="muted" id="est-note" style="margin:14px 0 0;font-size:15px"></p>
+            <p style="margin:18px 0 0"><a class="button" href="/lab/contact">Get a quote</a></p>
+          </div>
+        </form>
+      </section>
+
+      <section class="section">
+        <div class="note-box">
+          <h3>Always included</h3>
+          <ul class="checks">
+            <li>A screen built around your theme or idea</li>
+            <li>All the equipment, set up and taken down</li>
+            <li>Someone from Brightmade running it all event long</li>
+            <li>A scan-to-save QR code for anything guests make</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>Photos and privacy</h2></div>
+        <div class="note-box" id="privacy">
+          <h3>Photos, AI and privacy, in plain words</h3>
+          <ul class="checks">
+            <li>Guests never need an account, an email address or a phone number to join in.</li>
+            <li>If your screen takes photos, they are taken on our equipment. Each one gets its own private link, and only its QR code opens it.</li>
+            <li>Some screens use AI, for example to turn a photo into a portrait or to read a handwritten note. When one does, the photo is sent to an AI service from Google (Gemini) to do that, and we tell you which screens work this way before you book.</li>
+            <li>After your event we send the host a copy of the photos and delete them from our system. Any guest can skip a screen or ask us to delete their photo.</li>
+          </ul>
+          <p class="muted">Questions about photos or privacy? <a href="/lab/contact">Write to us</a> before the day and we will answer plainly.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>Questions we hear a lot</h2></div>
+        <div class="faq">
+          <details><summary>What can you put on a screen?</summary><p>Almost anything you can describe: a game, a photo moment, a message wall, a countdown, a themed world. See the <a href="/lab/experiences">screen ideas</a> for a taste, then tell us yours.</p></details>
+          <details><summary>Does a different idea cost more?</summary><p>No. A screen is $100 an hour whatever the theme. Company events are $150 an hour per screen, plus a one time fee for logo and theme work.</p></details>
+          <details><summary>What do you need from us?</summary><p>A little floor space and a power outlet for each screen, and a good internet connection. We check the details with you before the day.</p></details>
+          <details><summary>Is AI really involved?</summary><p>Some screens use it, and we like to say so. The privacy note above explains what is sent and what happens to it, and we tell you before you book which screens use AI.</p></details>
+          <details><summary>What if the event runs long?</summary><p>No problem. Extra time is billed in half hour steps at the same hourly price.</p></details>
+          <details><summary>How do we book?</summary><p>Send us your idea, the date, the place and roughly how many guests through the <a href="/lab/contact">contact page</a>. We write back with a clear quote.</p></details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="cta-band">
+          <h2>Got an idea for a screen?</h2>
+          <p class="lead">Tell us what you want to show, the date and roughly how many guests. We will write back with a clear quote.</p>
+          <div class="btn-row">
+            <a class="button big" href="/lab/contact">Book a screen</a>
+            <a class="button big ghost" href="/lab/pricing">See pricing</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; 2026 Brightmade Studios LLC</span>
+      <nav aria-label="Footer">
+        <a href="/lab/experiences">Screen ideas</a>
+        <a href="/lab/pricing">Pricing</a>
+        <a href="/lab/about">About</a>
+        <a href="/lab/contact">Contact</a>
+        <a href="/lab/privacy">Privacy</a>
+        <a href="/lab/terms">Terms</a>
+        <a href="/lab/support">Support</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/lab/assets/galaxy.js" defer></script>
+  <script src="/lab/assets/estimate.js" defer></script>
+</body>
+</html>
