@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/assets/site.css">
   <link rel="stylesheet" href="/assets/hunt.css">
   <link rel="stylesheet" href="/assets/product.css">
+  <link rel="stylesheet" href="/assets/pto-demo.css">
 </head>
 <body>
   <script>document.documentElement.classList.add("js")</script>
@@ -40,10 +41,41 @@
             <p class="price"><span class="price-now">$150</span> <span class="price-was">first year</span></p>
             <p class="price-once">Launch price. App Store and Google Play publishing included.</p>
             <p class="price-note">After the first year, the app is $250 a year.</p>
-            <p class="price-actions"><a class="button" href="#get">Claim the launch price</a> <a class="button button-ghost" href="#watch">Watch the video</a></p>
+            <p class="price-actions"><a class="button" href="#get">Claim the launch price</a> <a class="button button-ghost" href="#demo">See the app in action</a></p>
+            <p class="small"><a href="#watch">Or watch the 49 second story</a></p>
           </div>
         </section>
       </div>
+
+      <section id="demo" class="pto-demo" aria-labelledby="demo-title">
+        <div class="pto-demo-copy">
+          <span class="pill">Try it yourself</span>
+          <h2 id="demo-title">See the app in action. <span class="gold">Go ahead, tap around.</span></h2>
+          <p>This is the app your families get. Open an event, switch to Spanish, peek at the PTO board view and send a notification, right here on the phone.</p>
+          <div class="demo-try" aria-label="Try a feature">
+            <button type="button" data-demo="notify">&#128276; Send a notification</button>
+            <button type="button" data-demo="lang">&#127758; Switch to Spanish</button>
+            <button type="button" data-demo="event">&#128197; Open an event</button>
+            <button type="button" data-demo="board">&#128736;&#65039; Board view</button>
+          </div>
+          <ul class="demo-feats">
+            <li>Push alerts on every phone</li>
+            <li>Events and RSVP to volunteer</li>
+            <li>Add events to the calendar</li>
+            <li>Spirit nights with flyers</li>
+            <li>Meeting minutes</li>
+            <li>Staff favorites</li>
+            <li>English and Spanish</li>
+            <li>Board posts in seconds</li>
+          </ul>
+        </div>
+        <div class="pto-demo-stage">
+          <div id="pto-demo" class="demo-phone" role="group" aria-label="Interactive demo of the School PTO App with sample content">
+            <noscript><img src="/assets/pto/ad-poster.jpg" alt="" width="720" height="1280"></noscript>
+          </div>
+          <p class="demo-hint">Sample content for an imaginary school</p>
+        </div>
+      </section>
 
       <section id="watch" class="pto-watch" aria-labelledby="watch-title">
         <div class="pto-watch-copy">
@@ -182,5 +214,6 @@
   <script src="/assets/galaxy.js" defer></script>
   <script src="/assets/pto-get.js" defer></script>
   <script src="/assets/pto-video.js" defer></script>
+  <script src="/assets/pto-demo.js" defer></script>
 </body>
 </html>
