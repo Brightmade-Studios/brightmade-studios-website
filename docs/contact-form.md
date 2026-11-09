@@ -9,3 +9,7 @@ If the Worker's address ever changes, update `WORKER` in `public/assets/contact.
 `/questly#get` is the Get Questly form. `public/assets/questly-get.js` posts it to the same Worker `POST /contact`, with no Worker change: the Worker only takes `name`, `email` and `message`, so the phone number, the referral and any note are written into the message. The email therefore arrives with the Worker's usual subject, "New project inquiry from NAME", and its first line says "Questly order request", plus "REFERRAL (10% off)" when the family was referred.
 
 A link with `?ref=` ticks "Someone referred us" and shows the $135 price. The printed QR code on `/questly-refer` (`public/assets/questly/refer-qr.svg`) opens `https://brightmadestudios.com/questly?ref=qr#get`; a family sharing their own link can put their first name in it instead of `qr`. To regenerate the QR code, encode that same URL with any QR generator, error correction M, dark `#12103a` on white.
+
+## School PTO app form
+
+`/pto-app#get` is the "Get the app for your school" form. `public/assets/pto-get.js` posts it to the same Worker `POST /contact` the same way, writing the school, phone number and note into the message. Its first line reads "PTO app request".
