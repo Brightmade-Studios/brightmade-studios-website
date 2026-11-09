@@ -147,3 +147,20 @@ section.cta-band { margin: 56px auto 0; text-align: center; max-width: 760px; ba
   .refer-link { color: var(--print-text); }
   .qr { box-shadow: none; }
 }
+
+/* School PTO app page: a wide hero picture with the words over its empty left side, and a full width photo */
+.pto-hero { position: relative; margin-top: 8px; }
+.pto-hero-art { display: block; width: 100%; height: auto; border-radius: 24px; box-shadow: var(--shadow); }
+.pto-hero-copy .pill { display: inline-block; margin-bottom: 10px; }
+.pto-photo { margin: 48px 0 0; }
+.pto-photo img { display: block; width: 100%; height: auto; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+
+@media (min-width: 1000px) {
+  .pto-hero { min-height: min(760px, calc(100vh - 140px)); display: flex; align-items: center; }
+  .pto-hero-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+  .pto-hero-copy { position: relative; text-align: left; max-width: 560px; padding: 48px; }
+  .pto-hero-copy h1 { font-size: 56px; margin-bottom: 12px; }
+  .pto-hero-copy .lead { margin-left: 0; font-size: 20px; }
+  .pto-hero-copy .price-hero { margin: 28px 0 0; }
+  .pto-hero-copy .price, .pto-hero-copy .price-actions { justify-content: flex-start; }
+}

@@ -19,6 +19,7 @@ To re-run a deploy without a code change: **Actions > Deploy > Run workflow** on
 - `public/assets/logo/` holds the logo; the header uses the static `logo.svg`.
 - `public/assets/fun.css` styles the playful pages (home, experiences, pricing, about, contact). `nav.js` is the phone menu, `estimate.js` the price estimate on `/pricing` (keep its numbers equal to the price cards), `video-slot.js` swaps the video placeholder for `public/assets/video/experience.mp4` once that file exists (poster: `experience-poster.jpg`).
 - `public/questly.html` is the Questly product page; `questly-privacy.html` and `questly-terms.html` are its own privacy policy and terms; `questly-refer.html` is the printable referral card with the QR code.
+- `public/pto-app.html` is the School PTO App product page (images in `public/assets/pto/`, form in `pto-get.js`). Keep its prices equal to the card on `/apps`.
 - `scripts/check-site.mjs` runs on every pull request.
 - `scripts/deploy-hosting.mjs` publishes `public/` through the Firebase Hosting REST API with a short-lived token.
 - `docs/keyless-setup.md` is the one-time Google Cloud setup that lets GitHub deploy.
