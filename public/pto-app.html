@@ -55,7 +55,10 @@
         <div class="pto-reel-wrap">
           <div class="pto-reel-glow" aria-hidden="true"></div>
           <div class="pto-reel">
-            <video id="pto-video" src="/assets/pto/ad.mp4" poster="/assets/pto/ad-poster.jpg" preload="none" playsinline width="720" height="1280" aria-label="A 49 second ad: a mother finds a crumpled PTO flyer for a book fair that already happened. Then, with the school PTO app, a notification tells her the night before, and she and her son enjoy the book fair together."></video>
+            <video id="pto-video" poster="/assets/pto/ad-poster.jpg" preload="none" playsinline width="720" height="1280" aria-label="A 49 second ad: a mother finds a crumpled PTO flyer for a book fair that already happened. Then, with the school PTO app, a notification tells her the night before, and she and her son enjoy the book fair together.">
+              <source src="/assets/pto/hls/ad.m3u8" type="application/vnd.apple.mpegurl">
+              <source src="/assets/pto/ad.mp4" type="video/mp4">
+            </video>
             <button class="pto-reel-play" type="button" data-play aria-label="Play the video with sound"><span aria-hidden="true">&#9654;</span></button>
           </div>
         </div>

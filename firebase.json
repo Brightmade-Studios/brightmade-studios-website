@@ -46,6 +46,24 @@
             "value": "noindex, nofollow"
           }
         ]
+      },
+      {
+        "source": "/assets/pto/hls/*.m3u8",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/vnd.apple.mpegurl"
+          }
+        ]
+      },
+      {
+        "source": "/assets/pto/hls/*.ts",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "video/mp2t"
+          }
+        ]
       }
     ],
     "redirects": [
