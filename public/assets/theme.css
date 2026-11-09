@@ -47,4 +47,30 @@
   --nebula-magenta: rgba(190, 80, 220, 0.18);
   --nebula-blue: rgba(60, 110, 255, 0.22);
   --nebula-core: rgba(214, 204, 255, 0.10);
+
+  /* Interactive PTO app demo on /pto-app: the app's own purple, gold and frosted glass palette */
+  --demo-ink: #3b0764;
+  --demo-purple-900: #581c87;
+  --demo-purple-700: #7e22ce;
+  --demo-purple-600: #9333ea;
+  --demo-purple-400: #c084fc;
+  --demo-purple-100: #f3e8ff;
+  --demo-gold-300: #fcd34d;
+  --demo-gold-500: #f59e0b;
+  --demo-blue-400: #60a5fa;
+  --demo-blue-600: #2563eb;
+  --demo-green: #16a34a;
+  --demo-white: #ffffff;
+  --demo-muted: #6b4f8f;
+  --demo-glass: rgba(255, 255, 255, 0.62);
+  --demo-glass-strong: rgba(255, 255, 255, 0.82);
+  --demo-glass-border: rgba(255, 255, 255, 0.85);
+  --demo-dock: rgba(88, 28, 135, 0.88);
+  --demo-dock-icon: rgba(255, 255, 255, 0.82);
+  --demo-scrim: rgba(40, 10, 70, 0.45);
+  --demo-sky-1: #e9d5ff;
+  --demo-sky-2: #fde68a;
+  --demo-sky-3: #c4b5fd;
+  --demo-sky-4: #fbcfe8;
+  --demo-shadow: 0 8px 24px rgba(59, 7, 100, 0.18);
 }
