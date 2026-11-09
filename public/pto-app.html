@@ -40,10 +40,26 @@
             <p class="price"><span class="price-now">$150</span> <span class="price-was">first year</span></p>
             <p class="price-once">Launch price. App Store and Google Play publishing included.</p>
             <p class="price-note">After the first year, the app is $250 a year.</p>
-            <p class="price-actions"><a class="button" href="#get">Claim the launch price</a> <a class="button button-ghost" href="#features">See what it does</a></p>
+            <p class="price-actions"><a class="button" href="#get">Claim the launch price</a> <a class="button button-ghost" href="#watch">Watch the video</a></p>
           </div>
         </section>
       </div>
+
+      <section id="watch" class="pto-watch" aria-labelledby="watch-title">
+        <div class="pto-watch-copy">
+          <span class="pill">Watch the 49 second story</span>
+          <h2 id="watch-title">The flyer never made it home. <span class="gold">The app did.</span></h2>
+          <p>Every PTO knows the moment: the event was yesterday, and a parent is only now finding out. See what changes when every family hears from you the moment you post.</p>
+          <p><button class="button pto-play-btn" type="button" data-play>&#9654; Play with sound</button></p>
+        </div>
+        <div class="pto-reel-wrap">
+          <div class="pto-reel-glow" aria-hidden="true"></div>
+          <div class="pto-reel">
+            <video id="pto-video" src="/assets/pto/ad.mp4" poster="/assets/pto/ad-poster.jpg" preload="none" playsinline width="720" height="1280" aria-label="A 49 second ad: a mother finds a crumpled PTO flyer for a book fair that already happened. Then, with the school PTO app, a notification tells her the night before, and she and her son enjoy the book fair together."></video>
+            <button class="pto-reel-play" type="button" data-play aria-label="Play the video with sound"><span aria-hidden="true">&#9654;</span></button>
+          </div>
+        </div>
+      </section>
 
       <section class="hunt-intro">
         <span class="pill">One place for everything PTO</span>
@@ -162,5 +178,6 @@
   </footer>
   <script src="/assets/galaxy.js" defer></script>
   <script src="/assets/pto-get.js" defer></script>
+  <script src="/assets/pto-video.js" defer></script>
 </body>
 </html>
