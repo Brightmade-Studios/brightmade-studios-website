@@ -227,7 +227,7 @@
     if (!box || !(thanks || (t && /^[A-Za-z0-9._-]+$/.test(t)))) return;
     box.hidden = false;
     box.querySelectorAll("[data-state]").forEach(function (el) { el.hidden = el.dataset.state === (thanks ? "ask" : "thanks"); });
-    if (!thanks) box.querySelector("form").action = "https://brightmate-worker.brightmadestudios.workers.dev/i/" + t;
+    if (!thanks) box.querySelector("form").action = "https://brightmate-worker.brightmadestudios.workers.dev/i/" + t + "?to=" + encodeURIComponent(location.origin + location.pathname);
     box.scrollIntoView({ block: "start" });
   })();
   </script>
