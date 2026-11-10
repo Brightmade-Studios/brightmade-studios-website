@@ -30,6 +30,15 @@
   </header>
   <main>
     <div class="wrap">
+      <section id="interest-splash" class="pto-splash" hidden aria-live="polite">
+        <span class="pill">Thanks for stopping by</span>
+        <h2 data-state="ask">Want us to reach out about a PTO app for your school?</h2>
+        <p data-state="ask">Tap below and Javier will personally get in touch. Then look around the app while you're here.</p>
+        <form data-state="ask" method="post" action="#"><button class="button" type="submit">Yes, I'm interested</button></form>
+        <h2 data-state="thanks">You're on the list! &#127881;</h2>
+        <p data-state="thanks">Thank you. Javier will be in touch soon. In the meantime, tap around the live demo below.</p>
+        <p><a class="button button-ghost" href="#demo">See the app in action</a></p>
+      </section>
       <div class="pto-hero">
         <img class="pto-hero-art" src="/assets/pto/hero.webp" alt="A phone glowing with a school PTO app, with frosted cards floating off the screen: Fall Book Fair on Friday at 3pm, Picture Day is tomorrow, a monthly calendar and a Hola, Hello language chip." width="1600" height="893">
         <section class="co-hero pto-hero-copy">
@@ -211,6 +220,17 @@
       </nav>
     </div>
   </footer>
+  <script>
+  (function () {
+    var q = new URLSearchParams(location.search), box = document.getElementById("interest-splash");
+    var t = q.get("interest"), thanks = q.get("thanks") === "1";
+    if (!box || !(thanks || (t && /^[A-Za-z0-9._-]+$/.test(t)))) return;
+    box.hidden = false;
+    box.querySelectorAll("[data-state]").forEach(function (el) { el.hidden = el.dataset.state === (thanks ? "ask" : "thanks"); });
+    if (!thanks) box.querySelector("form").action = "https://brightmate-worker.brightmadestudios.workers.dev/i/" + t;
+    box.scrollIntoView({ block: "start" });
+  })();
+  </script>
   <script src="/assets/galaxy.js" defer></script>
   <script src="/assets/pto-get.js" defer></script>
   <script src="/assets/pto-video.js" defer></script>
