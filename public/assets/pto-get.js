@@ -1,6 +1,6 @@
 // "Get the app for your school" form on /pto-app: sends to the mail Worker (docs/contact-form.md), which emails the Brightmade inbox.
 (function () {
-  var WORKER = "https://brightmade-portal.brightmadestudios.workers.dev/contact";
+  var WORKER = "https://brightmate-worker.brightmadestudios.workers.dev/contact";
   var form = document.getElementById("get-form");
   if (!form) return;
   var status = document.getElementById("gf-status");

@@ -1,7 +1,7 @@
 // Contact form: sends to the mail Worker (docs/contact-form.md), which emails the Brightmade inbox.
 // The Worker takes name, email and message, so the topic, date and guest count are written into the message.
 (function () {
-  var WORKER = "https://brightmade-portal.brightmadestudios.workers.dev/contact";
+  var WORKER = "https://brightmate-worker.brightmadestudios.workers.dev/contact";
   var form = document.getElementById("contact-form");
   if (!form) return;
   var status = document.getElementById("cf-status");
