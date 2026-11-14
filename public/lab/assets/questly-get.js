@@ -1,7 +1,7 @@
 // "Get Questly" form on /questly: sends to the mail Worker (docs/contact-form.md), which emails the Brightmade inbox.
 // Arriving from the referral QR code (/questly?ref=...) ticks "Someone referred us" and shows the 10% price.
 (function () {
-  var WORKER = "https://brightmade-portal.brightmadestudios.workers.dev/contact";
+  var WORKER = "https://brightmate-worker.brightmadestudios.workers.dev/contact";
   var form = document.getElementById("get-form");
   if (!form) return;
   var status = document.getElementById("gf-status");
