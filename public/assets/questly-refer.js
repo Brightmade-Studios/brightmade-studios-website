@@ -13,6 +13,7 @@
   }
   function update() { shown.textContent = link().replace("https://", "").replace("#get", ""); }
   name.addEventListener("input", update);
+  document.getElementById("refer-name-form").addEventListener("submit", function (e) { e.preventDefault(); });
 
   if (navigator.share) {
     share.hidden = false;

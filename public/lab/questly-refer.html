@@ -13,7 +13,7 @@
   <meta property="og:image" content="https://brightmadestudios.com/assets/questly/share.jpg">
   <link rel="icon" href="/lab/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/lab/apple-touch-icon.png">
-  <link rel="preload" href="/lab/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/lab/assets/theme.css">
   <link rel="stylesheet" href="/lab/assets/site.css">
   <link rel="stylesheet" href="/lab/assets/product.css">
@@ -23,7 +23,7 @@
   <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/lab"><img src="/lab/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
+      <a class="brand" href="/lab"><img src="/assets/logo/logo.svg" alt="Brightmade Studios" width="144" height="52"></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Menu</span><span class="bars" aria-hidden="true"></span></button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <a href="/lab/experiences">Screen ideas</a>
@@ -42,14 +42,14 @@
         <p class="back no-print"><a href="/lab/questly">&larr; Questly</a></p>
         <h1>Share Questly, give 10% off</h1>
         <p class="lead">Know a family who would love Questly? Point their phone camera at this code. They get 10% off, so their launch price is $135 instead of $150.</p>
-        <img class="qr" src="/lab/assets/questly/refer-qr.svg" alt="QR code that opens the Get Questly form on brightmadestudios.com with the 10% referral discount" width="280" height="280">
+        <img class="qr" src="/assets/questly/refer-qr.svg" alt="QR code that opens the Get Questly form on brightmadestudios.com with the 10% referral discount" width="280" height="280">
         <p class="refer-link" id="refer-link">brightmadestudios.com/questly?ref=qr</p>
         <div class="refer-actions">
           <button class="button" type="button" id="refer-share" hidden>Share the link</button>
           <button class="button button-ghost" type="button" id="refer-copy">Copy the link</button>
           <button class="button button-ghost" type="button" id="refer-print">Print this card</button>
         </div>
-        <form class="form no-print" id="refer-name-form" onsubmit="return false">
+        <form class="form no-print" id="refer-name-form">
           <label for="refer-name">Want them to know it was you? <span class="muted">(optional)</span></label>
           <input id="refer-name" type="text" maxlength="60" autocomplete="name" placeholder="Your first name">
           <p class="muted small">Your name goes into the link you share or copy, and shows up on their form. It is not saved anywhere until they send it.</p>
@@ -79,7 +79,7 @@
       </nav>
     </div>
   </footer>
-  <script src="/lab/assets/galaxy.js" defer></script>
-  <script src="/lab/assets/questly-refer.js" defer></script>
+  <script src="/assets/galaxy.js" defer></script>
+  <script src="/assets/questly-refer.js" defer></script>
 </body>
 </html>

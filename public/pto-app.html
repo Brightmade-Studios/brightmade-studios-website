@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="/assets/pto-demo.css">
 </head>
 <body>
-  <script>document.documentElement.classList.add("js")</script>
+  <script src="/assets/js-on.js"></script>
   <div class="galaxy" aria-hidden="true"><canvas class="galaxy-stars"></canvas></div>
   <header class="site-header">
     <div class="wrap">
@@ -220,17 +220,7 @@
       </nav>
     </div>
   </footer>
-  <script>
-  (function () {
-    var q = new URLSearchParams(location.search), box = document.getElementById("interest-splash");
-    var t = q.get("interest"), thanks = q.get("thanks") === "1";
-    if (!box || !(thanks || (t && /^[A-Za-z0-9._-]+$/.test(t)))) return;
-    box.hidden = false;
-    box.querySelectorAll("[data-state]").forEach(function (el) { el.hidden = el.dataset.state === (thanks ? "ask" : "thanks"); });
-    if (!thanks) box.querySelector("form").action = "https://brightmate-worker.brightmadestudios.workers.dev/i/" + t + "?to=" + encodeURIComponent(location.origin + location.pathname);
-    box.scrollIntoView({ block: "start" });
-  })();
-  </script>
+  <script src="/assets/pto-interest.js"></script>
   <script src="/assets/galaxy.js" defer></script>
   <script src="/assets/pto-get.js" defer></script>
   <script src="/assets/pto-video.js" defer></script>
