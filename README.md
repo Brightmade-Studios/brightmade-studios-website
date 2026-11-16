@@ -21,6 +21,8 @@ To re-run a deploy without a code change: **Actions > Deploy > Run workflow** on
 - `public/questly.html` is the Questly product page; `questly-privacy.html` and `questly-terms.html` are its own privacy policy and terms; `questly-refer.html` is the printable referral card with the QR code.
 - `public/pto-app.html` is the School PTO App product page (images in `public/assets/pto/`, form in `pto-get.js`). Keep its prices equal to the card on `/apps`.
 - `scripts/check-site.mjs` runs on every pull request.
+- `firebase.json` sends a Content-Security-Policy: scripts, styles, fonts, pictures and video only from this site, and forms and requests only to this site and the Brightmate Worker. So no inline `<script>` and no `onclick=""` style handlers (the check fails on them); put scripts in `public/assets/`. A new outside service (analytics, an embedded video, a font host) must be added to that header or the browser blocks it.
+- `public/lab/` keeps only the files that differ from the live site; everything shared (logo, fonts, pictures, `galaxy.js`, the Questly and Hunt scripts) is loaded from `/assets/`. To change a shared file for the lab only, copy it into `public/lab/assets/` and point the lab pages at the copy.
 - `scripts/deploy-hosting.mjs` publishes `public/` through the Firebase Hosting REST API with a short-lived token.
 - `docs/keyless-setup.md` is the one-time Google Cloud setup that lets GitHub deploy.
 

@@ -30,6 +30,7 @@
       ? "Plus a one time logo and theme fee, which we quote once we know what you need."
       : "Travel beyond our free range is extra, and we always confirm before it is added.";
   }
+  form.addEventListener("submit", function (e) { e.preventDefault(); });
   form.addEventListener("input", update);
   form.addEventListener("change", update);
   update();

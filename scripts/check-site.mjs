@@ -22,6 +22,9 @@ for (const file of files.filter((f) => f.endsWith(".html"))) {
     if (!href.startsWith("/")) continue;
     if (!resolves(href)) problems.push(`${sitePath(file)} links to missing ${href}`);
   }
+  // The Content-Security-Policy in firebase.json only runs scripts from our own files.
+  if (/<script(?![^>]*\bsrc=)(?![^>]*type="application\/ld\+json")[^>]*>/.test(html)) problems.push(`${sitePath(file)} has an inline <script>; move it to a file in assets (the security header blocks inline scripts)`);
+  if (/<[^>]+\son[a-z]+="/.test(html)) problems.push(`${sitePath(file)} has an inline on...="" handler; use addEventListener in a script file`);
   if (/[–—]/.test(html)) problems.push(`${sitePath(file)} contains an en or em dash`);
 }
 
