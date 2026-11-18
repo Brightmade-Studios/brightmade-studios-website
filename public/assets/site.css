@@ -148,6 +148,8 @@ li { margin-bottom: 6px; }
 }
 .form input:focus-visible, .form textarea:focus-visible { border-color: var(--accent); }
 .form textarea { resize: vertical; min-height: 140px; }
+.form input[type="checkbox"] { width: auto; margin-right: 10px; vertical-align: top; margin-top: 5px; }
+.form .consent { font-weight: 400; }
 .form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form + .callout, .form ~ .muted { margin-top: 24px; }
 .form .button { margin-top: 8px; border: 0; font: inherit; font-weight: 800; cursor: pointer; }

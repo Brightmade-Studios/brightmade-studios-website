@@ -35,6 +35,27 @@
         <p><strong>By sending a text message to (636) 201-2999, you agree to receive text messages from Brightmade Studios LLC about your question, quote or project.</strong> You do not have to text us to buy anything, and consent is not a condition of any purchase. We store your phone number and messages only to reply to you, and only after you text us or ask us to text you. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time, or HELP for help.</p>
         <p>To give your consent and start a conversation, text this sample message to (636) 201-2999: <em>"Hi Brightmade Studios, I agree to receive text messages from you about my request."</em></p>
         <p><a class="button" href="sms:+16362012999?&amp;body=Hi%20Brightmade%20Studios%2C%20I%20agree%20to%20receive%20text%20messages%20from%20you%20about%20my%20request.">Text us now</a></p>
+        <h2>Or ask us to text you</h2>
+        <p>Give us your mobile number and we will text you about your request.</p>
+        <form id="sms-form" class="form" novalidate>
+          <label for="sf-name">Your name</label>
+          <input id="sf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+          <label for="sf-email">Your email</label>
+          <input id="sf-email" name="email" type="email" autocomplete="email" maxlength="200" required>
+          <label for="sf-phone">Mobile phone number</label>
+          <input id="sf-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="(555) 555-5555" required>
+          <label for="sf-message">What can we help with?</label>
+          <textarea id="sf-message" name="message" rows="4" maxlength="2000" required></textarea>
+          <div class="hp" aria-hidden="true"><label for="sf-company">Company</label><input id="sf-company" name="company" type="text" tabindex="-1" autocomplete="off"></div>
+          <p><label class="consent" for="sf-consent"><input id="sf-consent" name="consent" type="checkbox" required> I agree to receive text messages from Brightmade Studios LLC at the mobile number above about my request. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of any purchase. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</label></p>
+          <p id="sf-status" class="form-status" role="status" aria-live="polite"></p>
+          <button class="button" type="submit">Send</button>
+        </form>
+        <div id="sf-done" class="callout" role="status" hidden>
+          <p><strong>Thank you, we got it.</strong> We will text you at the number you gave us.</p>
+        </div>
+        <noscript><p>This form needs JavaScript. You can also text (636) 201-2999.</p></noscript>
+
 
         <h2>How texting works</h2>
         <ul>
@@ -66,5 +87,6 @@
     </div>
   </footer>
   <script src="/assets/galaxy.js" defer></script>
+  <script src="/assets/text.js" defer></script>
 </body>
 </html>
